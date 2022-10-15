@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import EarnRewards from "./EarnRewards";
-import CardDeal from "./CardDeal";
+import Gamify from "./Gamify";
 import Business from "./Business";
 import Clients from "./Clients";
 import CTA from "./CTA";
@@ -12,7 +12,7 @@ import Hero from "./Hero";
 export {
   Navbar,
   EarnRewards,
-  CardDeal,
+  Gamify,
   Business,
   Clients,
   CTA,
