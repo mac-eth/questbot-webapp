@@ -6,12 +6,12 @@ const CardDeal = () => (
   <section className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        Find a better card deal <br className="sm:block hidden" /> in few easy
+        <span className="text-gradient">Gamify</span> your server <br className="sm:block hidden" /> in a few easy
         steps.
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis
-        aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
+        QuestBot comes with a built-in game system that allows you to create quests and rewards for your server members. 
+        This not only makes your server more fun but also helps grow your community.
       </p>
 
       <Button styles={`mt-10`} />

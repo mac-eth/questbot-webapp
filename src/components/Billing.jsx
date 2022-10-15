@@ -20,8 +20,6 @@ const Billing = () => (
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         QuestBot gives out rewards which vary from discord-roles to virtual gold and even game-assets.
         Earning these rewards are as easy as sending memes or talking to your friends.
-
-        ENCZ will have a successful 
       </p>
     </div>
   </section>
