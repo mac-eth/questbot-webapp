@@ -7,7 +7,6 @@ import dropbox from "./dropbox.png";
 import logo from "./logo.png";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
-import send from "./Send.svg";
 import shield from "./Shield.svg";
 import star from "./Star.svg";
 import menu from "./menu.svg";
@@ -23,6 +22,7 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
+import game from "./game.svg"
 
 export {
   airbnb,
@@ -34,7 +34,6 @@ export {
   logo,
   quotes,
   robot,
-  send,
   shield,
   star,
   menu,
@@ -50,4 +49,5 @@ export {
   people01,
   people02,
   people03,
+  game,
 };

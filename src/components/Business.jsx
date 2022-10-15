@@ -22,13 +22,12 @@ const Business = () =>  (
   <section id="features" className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        You focus on the business, <br className="sm:block hidden" /> we’ll handle
-        the rest.
+        You <span className="text-gradient">focus</span> on your expanding <span className="text-gradient">business</span>, <br className="sm:block hidden" /> we’ll handle
+        the <span className="text-gradient">rest</span>.
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        With the right credit card, you can improve your financial life by
-        building credit, earning rewards and saving money. But with hundreds
-        of credit cards on the market.
+        QuestBot can be used in a multitude of different ways. Whether you're a tight knit gaming community, 
+        or a large scale business serving thousands of customers, QuestBot can help you achieve your goals.
       </p>
 
       <Button styles={`mt-10`} />

@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, shield, star, game  } from "../assets";
 
 export const navLinks = [
   {
@@ -21,21 +21,21 @@ export const features = [
     icon: star,
     title: "Rewards",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "Automated rewards for your members, growing your community and engagement.",
   },
   {
     id: "feature-2",
     icon: shield,
-    title: "100% Secured",
+    title: "Built-in Security",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "A state of the art Moderation Tool, making sure your community is always safe and secured.",
   },
   {
     id: "feature-3",
-    icon: send,
-    title: "Balance Transfer",
+    icon: game,
+    title: "Gamifying your Community",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "Automated games and challenges, making your community more engaging and fun.",
   },
 ];
 
