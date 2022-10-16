@@ -19,7 +19,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
 );
 
 const Business = () =>  (
-  <section id="features" className={layout.section}>
+  <section id="features" className={layout.section} >
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
         You <span className="text-gradient">focus</span> on your expanding <span className="text-gradient">business</span>, <br className="sm:block hidden" /> we’ll handle

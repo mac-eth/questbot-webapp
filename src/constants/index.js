@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, shield, star, game  } from "../assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, metamask, binance, coinbase, dropbox, shield, star, game, discord  } from "../assets";
 
 export const navLinks = [
   {
@@ -40,6 +40,30 @@ export const features = [
 ];
 
 export const feedback = [
+  {
+    id: "feedback-1",
+    content:
+      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
+    name: "Herman Jensen",
+    title: "Founder & Leader",
+    img: people01,
+  },
+  {
+    id: "feedback-2",
+    content:
+      "Money makes your life easier. If you're lucky to have it, you're lucky.",
+    name: "Steve Mark",
+    title: "Founder & Leader",
+    img: people02,
+  },
+  {
+    id: "feedback-3",
+    content:
+      "It is usually people in the money business, finance, and international trade that are really rich.",
+    name: "Kenn Gallagher",
+    title: "Founder & Leader",
+    img: people03,
+  },
   {
     id: "feedback-1",
     content:
@@ -176,18 +200,10 @@ export const socialMedia = [
 export const clients = [
   {
     id: "client-1",
-    logo: airbnb,
+    logo: discord,
   },
   {
     id: "client-2",
-    logo: binance,
-  },
-  {
-    id: "client-3",
-    logo: coinbase,
-  },
-  {
-    id: "client-4",
-    logo: dropbox,
+    logo: metamask,
   },
 ];

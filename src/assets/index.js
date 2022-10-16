@@ -22,7 +22,10 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
-import game from "./game.svg"
+import game from "./game.svg";
+import discord from "./discord.svg";
+import metamask from "./metamask.svg";
+import questbotlogo from "./questbotlogo.png";
 
 export {
   airbnb,
@@ -50,4 +53,7 @@ export {
   people02,
   people03,
   game,
+  discord,
+  metamask,
+  questbotlogo
 };
