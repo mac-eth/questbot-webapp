@@ -25,7 +25,6 @@ import people03 from "./people03.png";
 import game from "./game.svg";
 import discord from "./discord.svg";
 import metamask from "./metamask.svg";
-import questbotlogo from "./questbotlogo.png";
 
 export {
   airbnb,
@@ -55,5 +54,4 @@ export {
   game,
   discord,
   metamask,
-  questbotlogo
 };
