@@ -1,5 +1,5 @@
 {
-  "homepage": "http://mac-eth.github.io/questbot-website/",
+  "homepage": "https://mac-eth.github.io/questbot-website/",
   "name": "questbot-website",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview --port 3000",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.12",
