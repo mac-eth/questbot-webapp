@@ -20,8 +20,7 @@ const Testimonials = () => (
       <div className="w-full md:mt-0 mt-3">
         <p className={`${styles.paragraph} text-left max-w-[450px]`}>
           <FadeInSection>
-            Everything you need to accept card payments and grow your business
-            anywhere on the planet.
+            Don't take our word for how great QuestBot is, see what our users think.
           </FadeInSection>
         </p>
       </div>
