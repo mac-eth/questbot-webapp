@@ -13,6 +13,7 @@ export const navLinks = [
     id: "dashboard",
     title: "Dashboard",
   },
+
 ];
 
 export const features = [

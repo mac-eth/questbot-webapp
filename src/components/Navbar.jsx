@@ -2,13 +2,15 @@ import { useState } from "react";
 
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
+import styles from "../style";
+import LoginButton from "./LoginButton";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
+    <nav className="w-full flex py-6 justify-between items-center ">
       <img src={logo} alt="QuestBot" className="w-[134px] h-[32px]" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
@@ -24,6 +26,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <LoginButton />
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
@@ -51,6 +54,21 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div
+            className={`${styles.flexCenter}  ml-10 w-[80px] h-[40px] rounded-[10px] bg-purple-gradient glow-on-hover-small  p-[2px] cursor-pointer`}
+          >
+            <div
+              className={`${styles.flexCenter} flex-col bg-black w-[100%] h-[100%] rounded-[10px]`}
+            >
+              <div className={`${styles.flexStart} flex-row`}>
+                <div className="font-poppins font-medium text-[16px]">
+                  <div className="text-dimWhite hover:text-white active:text-white">
+                    <a href="#login">Login</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
