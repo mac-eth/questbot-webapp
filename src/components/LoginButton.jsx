@@ -1,6 +1,4 @@
 import styles from "../style";
-import env from "react-dotenv";
-import { useState } from "react";
 
 const LoginButton = () => (
   <div
