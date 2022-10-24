@@ -1,6 +1,7 @@
-import styles from "../style";
+import Image from "next/image";
+import styles from "../styles/style";
 import { arrowUp } from "../assets";
-import { FadeInSection } from "./hooks/FadeInSection";
+import { FadeInSection } from "../hooks/FadeInSection";
 
 const AddToServer = () => (
   <FadeInSection>
@@ -14,7 +15,7 @@ const AddToServer = () => (
           <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
             <span className="text-white">Add to</span>
           </p>
-          <img
+          <Image
             src={arrowUp}
             alt="arrow-up"
             className="w-[23px] h-[23px] object-contain"

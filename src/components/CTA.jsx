@@ -1,6 +1,6 @@
-import styles from "../style";
+import styles from "../styles/style";
 import GetStarted from "./GetStarted";
-import { FadeInSection } from "./hooks/FadeInSection";
+import { FadeInSection } from "../hooks/FadeInSection";
 
 const CTA = () => (
   <FadeInSection>

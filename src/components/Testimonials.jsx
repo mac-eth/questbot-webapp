@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import { feedback } from "../constants";
-import styles from "../style";
+import styles from "../styles/style";
 import FeedbackCard from "./FeedbackCard";
-import { FadeInSection } from "./hooks/FadeInSection";
+import { FadeInSection } from "../hooks/FadeInSection";
 
 const Testimonials = () => (
   <section

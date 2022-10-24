@@ -1,12 +1,13 @@
+import Image from "next/image";
 import { apple, bill, google } from "../assets";
-import styles, { layout } from "../style";
-import { FadeInSection } from "./hooks/FadeInSection";
+import styles, { layout } from "../styles/style";
+import { FadeInSection } from "../hooks/FadeInSection";
 
 const EarnRewards = () => (
   <section id="product" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
       <FadeInSection>
-        <img
+        <Image
           src={bill}
           alt="billing"
           className="w-[100%] h-[100%] relative z-[5]"

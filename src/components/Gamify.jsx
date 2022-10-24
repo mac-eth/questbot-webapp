@@ -1,7 +1,8 @@
+import Image from "next/image";
 import { card } from "../assets";
-import styles, { layout } from "../style";
+import styles, { layout } from "../styles/style";
 import Button from "./Button";
-import { FadeInSection } from "./hooks/FadeInSection";
+import { FadeInSection } from "../hooks/FadeInSection";
 
 const Gamify = () => (
   <section className={layout.section}>
@@ -25,7 +26,7 @@ const Gamify = () => (
 
     <div className={layout.sectionImg}>
       <FadeInSection>
-        <img src={card} alt="EarnRewards" className="w-[100%] h-[100%]" />
+        <Image src={card} alt="EarnRewards" className="w-[100%] h-[100%]" />
       </FadeInSection>
     </div>
   </section>

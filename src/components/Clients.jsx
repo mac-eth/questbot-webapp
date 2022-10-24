@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { clients } from "../constants";
-import styles from "../style";
-import { FadeInSection } from "./hooks/FadeInSection";
+import styles from "../styles/style";
+import { FadeInSection } from "../hooks/FadeInSection";
 
 const Clients = () => (
   <section className={`${styles.flexCenter} my-4`}>
@@ -11,7 +12,7 @@ const Clients = () => (
           className={`flex-1 ${styles.flexCenter} sm:min-w-[192px] min-w-[120px] m-5`}
         >
           <FadeInSection>
-            <img
+            <Image
               src={client.logo}
               alt="client_logo"
               className="sm:w-[192px] w-[100px] object-contain"

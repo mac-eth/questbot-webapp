@@ -1,7 +1,8 @@
-import styles from "../style";
+import Image from "next/image";
+import styles from "../styles/style";
 import { discount, robot } from "../assets";
 import AddToServer from "./AddToServer";
-import { FadeInSection } from "./hooks/FadeInSection";
+import { FadeInSection } from "../hooks/FadeInSection";
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
       >
         <FadeInSection>
         <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
-          <img src={discount} alt="discount" className="w-[32px] h-[32px]" />
+          <Image src={discount} alt="discount" className="w-[32px] h-[32px]" />
           <p className={`${styles.paragraph} ml-2`}>
             Get <span className="text-white">Started</span> using Questbot{" "}
             <span className="text-white">100% Free!</span>
@@ -51,7 +52,7 @@ const Hero = () => {
       <div
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
-        <img
+        <Image
           src={robot}
           alt="EarnRewards"
           className="w-[100%] h-[100%] scale-110 relative z-[5]"

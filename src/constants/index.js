@@ -16,6 +16,17 @@ export const navLinks = [
 
 ];
 
+export const ProfileDropdownOptions = [
+
+  { href: "/pro", title: "Pro" },
+  { href: "/memberships", title: "Memberships" },
+  { href: "/dashboard", title: "My servers" },
+  { href: "/", title: "Transfer Premium" },
+  { href: "/billing", title: "Billing" },
+  { href: "/settings", title: "Settings" },
+  { href: "/logout", title: "Logout" },
+]
+
 export const features = [
   {
     id: "feature-1",

@@ -1,6 +1,6 @@
 import { stats } from "../constants";
-import styles from "../style";
-import { FadeInSection } from "./hooks/FadeInSection";
+import styles from "../styles/style";
+import { FadeInSection } from "../hooks/FadeInSection";
 
 const Stats = () => (
   <FadeInSection>

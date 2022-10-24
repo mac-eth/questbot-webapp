@@ -1,4 +1,4 @@
-import styles from "../style";
+import styles from "../styles/style";
 import { EarnRewards, Business, Gamify, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "../components";
 
 const Home = () => (
