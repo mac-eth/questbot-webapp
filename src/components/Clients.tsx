@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import { clients } from "../constants";
 import styles from "../styles/style";

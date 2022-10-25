@@ -1,7 +1,9 @@
+import React from 'react';
 import Image from "next/image";
 import styles from "../styles/style";
 import { arrowUp } from "../assets";
 import { FadeInSection } from "../hooks/FadeInSection";
+
 
 const AddToServer = () => (
   <FadeInSection>

@@ -1,9 +1,10 @@
+import React from "react";
 import styles from "../styles/style";
 import { EarnRewards, Business, Gamify, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "../components";
 
 const Home = () => (
   <div className="bg-primary w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+    <div className={`${styles.paddingX} ${styles.flexCenter}`} >
       <div className={`${styles.boxWidth}`}>
         <Navbar />
       </div>

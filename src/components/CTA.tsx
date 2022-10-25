@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../styles/style";
 import GetStarted from "./GetStarted";
 import { FadeInSection } from "../hooks/FadeInSection";

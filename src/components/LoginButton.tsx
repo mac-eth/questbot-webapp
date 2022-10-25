@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../styles/style";
 
 import { signIn, signOut, useSession } from "next-auth/react";
@@ -24,11 +25,10 @@ const LoginButton = () => {
         </div>
       </div>
     );
-  }
-  if (session) {
+  } else {
     return (
       <div>
-        <ProfileDropdown />
+        <ProfileDropdown session={session} />
       </div>
     );
   }

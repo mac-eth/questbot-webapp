@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../styles/style";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,21 +6,13 @@ import { forwardRef, Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ProfileDropdownOptions } from "../constants";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { Session } from "next-auth";
 
-function MyLink(props, ref) {
-  let { href, children, ...rest } = props;
-  return (
-    <Link href={href}>
-      <a ref={ref} {...rest}>
-        {children}
-      </a>
-    </Link>
-  );
-}
+export default function ProfileDropDown(props: {session: Session}) {
+  //const { data: session, status } = useSession();
 
-export default function ProfileDropDown() {
-  const { data: session } = useSession();
-  const { user } = session;
+  var image = props.session?.user?.image;
+  if (!image) {image = ""} // TO DO: Add a default image
 
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -31,7 +24,7 @@ export default function ProfileDropDown() {
         >
           <Image
             className="rounded-full"
-            src={user?.image}
+            src={image}
             alt="user PFP"
             width={60}
             height={60}
@@ -49,17 +42,16 @@ export default function ProfileDropDown() {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-purple-gradient shadow-lg">
-          {ProfileDropdownOptions.map((ProfileDropdownOptions) => (
-            <Menu.Item key={ProfileDropdownOptions.href} as={Fragment}>
+          {ProfileDropdownOptions.map((ProfileDropdownOptions, index) => (
+            <Menu.Item key={index} as={Fragment}>
               {({ active }) => (
-                <MyLink
-                  href={ProfileDropdownOptions.href}
-                  className={`${
+                <Link href={ProfileDropdownOptions.href}>
+                  <a className={`${
                     active ? "bg-primary text-white" : "text-gray-900"
-                  } group font-poppins font-medium text-[12px] flex w-full items-center rounded-md px-4 py-2 text-sm}`}
-                >
-                  {ProfileDropdownOptions.title}
-                </MyLink>
+                  } group font-poppins font-medium text-[12px] flex w-full items-center rounded-md px-4 py-2 text-sm}`}>
+                    {ProfileDropdownOptions.title}
+                  </a>
+                </Link>
               )}
             </Menu.Item>
           ))}

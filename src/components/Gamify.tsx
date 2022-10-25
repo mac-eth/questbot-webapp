@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import { card } from "../assets";
 import styles, { layout } from "../styles/style";

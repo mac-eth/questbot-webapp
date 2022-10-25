@@ -24,3 +24,10 @@ spec:
         image: <IMAGE>
         ports:
         - containerPort: 3000
+        env:
+        - name: DISCORD_CLIENT_SECRET
+          value: #{QUESTBOT_DISCORD_CLIENT_SECRET}#
+        - name: DISCORD_CLIENT_ID
+          value: "#{QUESTBOT_CLIENT_ID}#"
+        - name: NEXTAUTH_URL
+          value: #{QUESTBOT_WEBSITE_URL}#
