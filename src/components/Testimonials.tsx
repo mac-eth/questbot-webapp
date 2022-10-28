@@ -3,7 +3,6 @@ import React from "react";
 import { feedback } from "../constants";
 import styles from "../styles/style";
 import FeedbackCard from "./FeedbackCard";
-import { FadeInSection } from "../hooks/FadeInSection";
 
 const Testimonials = () => (
   <section
@@ -14,16 +13,12 @@ const Testimonials = () => (
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1] fadein">
       <h2 className={styles.heading2}>
-        <FadeInSection>
           What People are <br className="sm:block hidden" /> saying about us
-        </FadeInSection>
       </h2>
 
       <div className="w-full md:mt-0 mt-3">
         <p className={`${styles.paragraph} text-left max-w-[450px]`}>
-          <FadeInSection>
             Don't take our word for how great QuestBot is, see what our users think.
-          </FadeInSection>
         </p>
       </div>
     </div>

@@ -1,34 +1,48 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { card } from "../assets";
 import styles, { layout } from "../styles/style";
 import Button from "./Button";
-import { FadeInSection } from "../hooks/FadeInSection";
+import { motion } from "framer-motion";
+import {
+  fromLeftAnimation,
+  fromRightAnimation,
+  fromTopAnimation,
+  fromBottomAnimation,
+} from "./AnimationVariants";
 
 const Gamify = () => (
   <section className={layout.section}>
     <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
-        <FadeInSection>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        variants={fromLeftAnimation}
+        viewport={{ once: false }}
+      >
+        <h2 className={styles.heading2}>
           <span className="text-gradient">Gamify</span> your server{" "}
           <br className="sm:block hidden" /> in a few easy steps.
-        </FadeInSection>
-      </h2>
-      <FadeInSection>
+        </h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           QuestBot comes with a built-in game system that allows you to create
           quests and rewards for your server members. This not only makes your
           server more fun but also helps grow your community.
         </p>
-      </FadeInSection>
+      </motion.div>
 
       <Button styles={`mt-10`} />
     </div>
 
     <div className={layout.sectionImg}>
-      <FadeInSection>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        variants={fromRightAnimation}
+        viewport={{ once: false }}
+      >
         <Image src={card} alt="EarnRewards" className="w-[100%] h-[100%]" />
-      </FadeInSection>
+      </motion.div>
     </div>
   </section>
 );

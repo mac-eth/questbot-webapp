@@ -1,8 +1,9 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { clients } from "../constants";
 import styles from "../styles/style";
-import { FadeInSection } from "../hooks/FadeInSection";
+import { motion } from "framer-motion";
+import { appearAnimation } from "./AnimationVariants";
 
 const Clients = () => (
   <section className={`${styles.flexCenter} my-4`}>
@@ -12,13 +13,18 @@ const Clients = () => (
           key={client.id}
           className={`flex-1 ${styles.flexCenter} sm:min-w-[192px] min-w-[120px] m-5`}
         >
-          <FadeInSection>
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={appearAnimation}
+            viewport={{ once: false }}
+          >
             <Image
               src={client.logo}
               alt="client_logo"
               className="sm:w-[192px] w-[100px] object-contain"
             />
-          </FadeInSection>
+          </motion.div>
         </div>
       ))}
     </div>

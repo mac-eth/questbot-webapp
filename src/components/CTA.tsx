@@ -1,10 +1,16 @@
 import React from "react";
 import styles from "../styles/style";
 import GetStarted from "./GetStarted";
-import { FadeInSection } from "../hooks/FadeInSection";
+import { motion } from "framer-motion";
+import { appearAnimation } from "./AnimationVariants";
 
 const CTA = () => (
-  <FadeInSection>
+  <motion.div
+    initial="offscreen"
+    whileInView="onscreen"
+    variants={appearAnimation}
+    viewport={{ once: false }}
+  >
     <section
       className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}
     >
@@ -22,7 +28,7 @@ const CTA = () => (
         <GetStarted />
       </div>
     </section>
-  </FadeInSection>
+  </motion.div>
 );
 
 export default CTA;

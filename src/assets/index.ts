@@ -1,4 +1,3 @@
-import airbnb from "./airbnb.png";
 import bill from "./bill.png";
 import binance from "./binance.png";
 import card from "./card.png";
@@ -27,7 +26,6 @@ import discord from "./discord.svg";
 import metamask from "./metamask.svg";
 
 export {
-  airbnb,
   bill,
   binance,
   card,

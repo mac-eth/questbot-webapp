@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/style";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { forwardRef, Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
@@ -13,6 +13,9 @@ export default function ProfileDropDown(props: {session: Session}) {
 
   var image = props.session?.user?.image;
   if (!image) {image = ""} // TO DO: Add a default image
+  
+  var username = props.session?.user?.name;
+  if (!username) {username = ""} // TO DO: Add a default username
 
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -26,6 +29,7 @@ export default function ProfileDropDown(props: {session: Session}) {
             className="rounded-full"
             src={image}
             alt="user PFP"
+            role={username}
             width={60}
             height={60}
             layout="fill"
@@ -45,13 +49,15 @@ export default function ProfileDropDown(props: {session: Session}) {
           {ProfileDropdownOptions.map((ProfileDropdownOptions, index) => (
             <Menu.Item key={index} as={Fragment}>
               {({ active }) => (
-                <Link href={ProfileDropdownOptions.href}>
-                  <a className={`${
+                (<Link
+                  href={ProfileDropdownOptions.href}
+                  className={`${
                     active ? "bg-primary text-white" : "text-gray-900"
                   } group font-poppins font-medium text-[12px] flex w-full items-center rounded-md px-4 py-2 text-sm}`}>
-                    {ProfileDropdownOptions.title}
-                  </a>
-                </Link>
+
+                  {ProfileDropdownOptions.title}
+
+                </Link>)
               )}
             </Menu.Item>
           ))}
