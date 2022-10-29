@@ -21,6 +21,7 @@ const EarnRewards = () => (
       >
         <Image
           src={bill}
+          aria-label="bill"
           alt="billing"
           className="w-[100%] h-[100%] relative z-[5]"
         />
@@ -39,16 +40,16 @@ const EarnRewards = () => (
         variants={fromRightAnimation}
         viewport={{ once: false }}
       >
-        <h2 className={styles.heading2}>
+        <div role="text" aria-label='heading' className={styles.heading2}>
           Earn daily <span className="text-gradient">rewards</span>{" "}
           <br className="sm:block hidden" />
           just from chatting.
-        </h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        </div>
+        <div role='text' aria-label='description' className={`${styles.paragraph} max-w-[470px] mt-5`}>
           QuestBot gives out rewards which vary from discord-roles to virtual
           gold and even game-assets. Earning these rewards are as easy as
           sending memes or talking to your friends.
-        </p>
+        </div>
       </motion.div>
     </div>
   </section>

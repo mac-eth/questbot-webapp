@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watch",
+    "test": "jest --watch --coverage --silent",
     "lint": "next lint"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "next-auth": "^4.15.0",
     "node-fetch": "^3.2.10",
     "react-intersection-observer": "^9.4.0",
+    "react-test-renderer": "^18.2.0",
     "typescript": "^4.8.4"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.0",
     "@types/react-dom": "^18.0.6",
+    "@types/react-test-renderer": "^18.0.0",
     "autoprefixer": "^10.4.12",
     "eslint": "8.25.0",
     "eslint-config-next": "^13.0.0",

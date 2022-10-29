@@ -1,6 +1,8 @@
-import { render, screen, act } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Hero from "../../src/components/Hero";
+import AddToServer from "../../src/components/AddToServer";
 import "@testing-library/jest-dom";
+
 
 describe("Hero Component", () => {
   it("Renders the HeroMicroBanner", () => {
@@ -35,11 +37,11 @@ describe("Hero Component", () => {
     });
     expect(mainDescription).toBeInTheDocument();
   });
-  it("Renders the 'AddToServer' Button", () => {
-    render(<Hero />);
-    const AddToServer = screen.getByRole("button", {
+  it("Renders the Add To Server Button", () => {
+    render(<AddToServer />);
+    const addToServerBtn = screen.getByRole("button", {
       name: "addToServer",
     });
-    expect(AddToServer).toBeInTheDocument();
+    expect(addToServerBtn).toBeInTheDocument();
   });
 });

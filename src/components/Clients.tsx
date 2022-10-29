@@ -21,6 +21,7 @@ const Clients = () => (
           >
             <Image
               src={client.logo}
+              aria-label={client.id}
               alt="client_logo"
               className="sm:w-[192px] w-[100px] object-contain"
             />

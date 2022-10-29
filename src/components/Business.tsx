@@ -4,10 +4,7 @@ import { features } from "../constants";
 import styles, { layout } from "../styles/style";
 import Button from "./Button";
 import { motion } from "framer-motion";
-import {
-  fromLeftAnimation,
-  fromRightAnimation,
-} from "./AnimationVariants";
+import { fromLeftAnimation, fromRightAnimation } from "./AnimationVariants";
 
 const FeatureCard = (feature: {
   icon: string;
@@ -49,13 +46,17 @@ const Business = () => (
         variants={fromLeftAnimation}
         viewport={{ once: false }}
       >
-        <h2 className={styles.heading2}>
+        <div role="text" aria-label="heading" className={styles.heading2}>
           You <span className="text-gradient">focus</span> on your expanding{" "}
           <span className="text-gradient">business</span>,{" "}
           <br className="sm:block hidden" /> we’ll handle the{" "}
           <span className="text-gradient">rest</span>.
-        </h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        </div>
+        <p
+          role="text"
+          aria-label="description"
+          className={`${styles.paragraph} max-w-[470px] mt-5`}
+        >
           QuestBot can be used in a multitude of different ways. Whether
           you&apos;re a tight knit gaming community, or a large scale business
           serving thousands of customers, QuestBot can help you achieve your
@@ -65,18 +66,19 @@ const Business = () => (
 
       <Button styles={`mt-10`} />
     </div>
-    <div className={`${layout.sectionImg} flex-col`}>
-      {features.map((feature, index) => (
-        <motion.div
-          key={feature.id}
-          initial="offscreen"
-          whileInView="onscreen"
-          variants={fromRightAnimation}
-          viewport={{ once: false }}
-        >
-          <FeatureCard key={feature.id} {...feature} index={index} />
-        </motion.div>
-      ))}
+    <div role="features" className={`${layout.sectionImg} flex-col`}>
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        variants={fromRightAnimation}
+        viewport={{ once: false }}
+      >
+        {features.map((feature, index) => (
+          <div role="features" aria-label={feature.id}>
+            <FeatureCard key={feature.id} {...feature} index={index} />
+          </div>
+        ))}
+      </motion.div>
     </div>
   </section>
 );
