@@ -46,7 +46,7 @@ describe("Footer Component", () => {
       }
     }
   });
-  it("Renders the entire Footerw", () => {
+  it("Renders the entire Footer", () => {
     const renderer = Renderer.create(
       <Footer />
     );
