@@ -24,6 +24,8 @@ import people03 from "./people03.png";
 import game from "./game.svg";
 import discord from "./discord.svg";
 import metamask from "./metamask.svg";
+import signout from "./signout.svg";
+import settings from "./settings.svg";
 
 export {
   bill,
@@ -52,4 +54,6 @@ export {
   game,
   discord,
   metamask,
+  signout,
+  settings,
 };

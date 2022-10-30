@@ -17,14 +17,23 @@ export const navLinks = [
 ];
 
 export const ProfileDropdownOptions = [
-
-  { href: "/pro", title: "Pro" },
-  { href: "/memberships", title: "Memberships" },
-  { href: "/dashboard", title: "My servers" },
-  { href: "/", title: "Transfer Premium" },
+  { title: "QuestBot",
+    Links: [
+    { href: "/pro", title: "Pro" },
+    { href: "/memberships", title: "Memberships" }
+    ]
+  },
+  { title: "My Servers",
+    Links: [
+    { href: "/dashboard", title: "My servers" },
+    { href: "/", title: "Transfer Premium" },
+    ]
+  },
+  { title: "Payment",
+  Links: [
   { href: "/billing", title: "Billing" },
-  { href: "/settings", title: "Settings" },
-  { href: "/logout", title: "Logout" },
+  ]
+  },
 ]
 
 export const features = [
