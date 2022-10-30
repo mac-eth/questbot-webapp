@@ -26,6 +26,7 @@ import discord from "./discord.svg";
 import metamask from "./metamask.svg";
 import signout from "./signout.svg";
 import settings from "./settings.svg";
+import down from "./down.svg";
 
 export {
   bill,
@@ -56,4 +57,5 @@ export {
   metamask,
   signout,
   settings,
+  down,
 };
