@@ -14,8 +14,8 @@ const styles = {
     marginX: "sm:mx-16 mx-6",
     marginY: "sm:my-16 my-6",
 
-    dropdowntitle: "py-2 px-2 rounded-md font-poppins font-semibold text-[12px] text-gray-200",
-    dropdownlink: "py-2 px-2 rounded-md hover:bg-gray-700 font-poppins font-normal text-[11px] text-gray-400",
+    dropdowntitle: "py-2 px-2 rounded-md font-poppins font-semibold text-[13px] text-gray-200",
+    dropdownlink: "py-2 px-2 rounded-md hover:bg-black font-poppins font-normal text-[12px] text-gray-300",
   };
   
   export const layout = {

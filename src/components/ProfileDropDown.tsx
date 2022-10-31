@@ -54,8 +54,8 @@ export default function ProfileDropDown(props: { session: Session }) {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute outline outline-1 outline-gray-400 right-0 w-56 origin-top-right font-poppins rounded-md bg-primary shadow-lg divide-y divide-gray-400">
-              <div className="bg-gray-800 rounded-md px-4 py-4">
+            <Menu.Items className="absolute backdrop-blur-xl backdrop-brightness-75 outline outline-1 outline-black right-0 w-56 origin-top-right font-poppins rounded-md shadow-lg divide-y divide-black">
+              <div className="rounded-md px-4 py-4">
                 <div className="text-gray-100 text-[16px]">{username}</div>
                 <div className="text-gray-300 text-[12px]">View Profile</div>
               </div>

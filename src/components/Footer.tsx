@@ -59,7 +59,7 @@ const Footer = () => (
           Copyright Ⓒ 2022 QuestBot. All Rights Reserved.
         </div>
 
-        <div className="flex flex-row md:mt-0 mt-6">
+        <div className="flex flex-row gap-x-4 md:mt-0 mt-6">
           {socialMedia.map((social, index) => (
             <Image
               key={social.id}
