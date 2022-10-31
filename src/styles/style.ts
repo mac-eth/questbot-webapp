@@ -15,7 +15,7 @@ const styles = {
     marginY: "sm:my-16 my-6",
 
     dropdowntitle: "py-2 px-2 rounded-md font-poppins font-semibold text-[13px] text-gray-200",
-    dropdownlink: "py-2 px-2 rounded-md hover:bg-black font-poppins font-normal text-[12px] text-gray-300",
+    dropdownlink: "py-2 px-2 rounded-md font-poppins font-normal text-[12px] text-gray-300 transition delay-50 ease-in hover:bg-black hover:scale-105",
   };
   
   export const layout = {
