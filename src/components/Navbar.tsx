@@ -5,7 +5,7 @@ import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 import LoginButton from "./LoginButton";
 import { motion } from "framer-motion";
-import { fromTopAnimation } from "./AnimationVariants";
+import { appearAnimation } from "./AnimationVariants";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -15,7 +15,7 @@ const Navbar = () => {
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      variants={fromTopAnimation}
+      variants={appearAnimation}
       viewport={{ once: false }}
     >
       <nav className="relative w-full flex py-6 justify-between items-center z-[10] ">

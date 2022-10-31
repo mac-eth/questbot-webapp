@@ -5,8 +5,7 @@ import styles, { layout } from "../styles/style";
 import Button from "./Button";
 import { motion } from "framer-motion";
 import {
-  fromLeftAnimation,
-  fromRightAnimation,
+  appearAnimation
 } from "./AnimationVariants";
 
 const Gamify = () => (
@@ -15,7 +14,7 @@ const Gamify = () => (
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        variants={fromLeftAnimation}
+        variants={appearAnimation}
         viewport={{ once: false }}
       >
         <div role='text' aria-label='heading' className={styles.heading2}>
@@ -36,7 +35,7 @@ const Gamify = () => (
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        variants={fromRightAnimation}
+        variants={appearAnimation}
         viewport={{ once: false }}
       >
         <Image src={card} alt="EarnRewards" className="w-[100%] h-[100%]" />

@@ -4,13 +4,13 @@ import styles from "../styles/style";
 import { logo } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
 import { motion } from "framer-motion";
-import { fromBottomAnimation } from "./AnimationVariants";
+import { appearAnimation } from "./AnimationVariants";
 
 const Footer = () => (
   <motion.div
     initial="offscreen"
     whileInView="onscreen"
-    variants={fromBottomAnimation}
+    variants={appearAnimation}
     viewport={{ once: false }}
   >
     <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>

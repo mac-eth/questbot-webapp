@@ -4,10 +4,7 @@ import { apple, bill, google } from "../assets";
 import styles, { layout } from "../styles/style";
 import { motion } from "framer-motion";
 import {
-  fromLeftAnimation,
-  fromRightAnimation,
-  fromTopAnimation,
-  fromBottomAnimation,
+  appearAnimation
 } from "./AnimationVariants";
 
 const EarnRewards = () => (
@@ -16,7 +13,7 @@ const EarnRewards = () => (
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        variants={fromLeftAnimation}
+        variants={appearAnimation}
         viewport={{ once: false }}
       >
         <Image
@@ -37,7 +34,7 @@ const EarnRewards = () => (
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        variants={fromRightAnimation}
+        variants={appearAnimation}
         viewport={{ once: false }}
       >
         <div role="text" aria-label='heading' className={styles.heading2}>

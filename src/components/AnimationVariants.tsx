@@ -63,7 +63,6 @@ const fromTopAnimation: Variants = {
   const appearAnimation: Variants = {
     offscreen: {
       scale: 0.2,
-      rotate: 30,
     },
     onscreen: {
         scale: 1,

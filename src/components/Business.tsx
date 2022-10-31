@@ -4,7 +4,7 @@ import { features } from "../constants";
 import styles, { layout } from "../styles/style";
 import Button from "./Button";
 import { motion } from "framer-motion";
-import { fromLeftAnimation, fromRightAnimation } from "./AnimationVariants";
+import { appearAnimation } from "./AnimationVariants";
 
 const FeatureCard = (feature: {
   icon: string;
@@ -43,7 +43,7 @@ const Business = () => (
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        variants={fromLeftAnimation}
+        variants={appearAnimation}
         viewport={{ once: false }}
       >
         <div role="text" aria-label="heading" className={styles.heading2}>
@@ -70,7 +70,7 @@ const Business = () => (
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        variants={fromRightAnimation}
+        variants={appearAnimation}
         viewport={{ once: false }}
       >
         {features.map((feature, index) => (

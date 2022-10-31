@@ -6,8 +6,6 @@ import AddToServer from "./AddToServer";
 import HeroMicroBanner from "./HeroMicroBanner";
 import { motion } from "framer-motion";
 import {
-  fromLeftAnimation,
-  fromTopAnimation,
   appearAnimation,
 } from "./AnimationVariants";
 
@@ -23,7 +21,7 @@ const Hero = () => {
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          variants={fromLeftAnimation}
+          variants={appearAnimation}
           viewport={{ once: false }}
         >
           <HeroMicroBanner />
@@ -33,7 +31,7 @@ const Hero = () => {
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
-            variants={fromLeftAnimation}
+            variants={appearAnimation}
             viewport={{ once: false }}
           >
             <h1
@@ -53,7 +51,7 @@ const Hero = () => {
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          variants={fromLeftAnimation}
+          variants={appearAnimation}
           viewport={{ once: false }}
         >
           <h1
@@ -67,7 +65,7 @@ const Hero = () => {
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          variants={fromLeftAnimation}
+          variants={appearAnimation}
           viewport={{ once: false }}
         >
           <p
@@ -108,7 +106,7 @@ const Hero = () => {
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          variants={fromTopAnimation}
+          variants={appearAnimation}
           viewport={{ once: false }}
         >
           <AddToServer />
