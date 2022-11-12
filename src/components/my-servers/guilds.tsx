@@ -1,14 +1,14 @@
-import { DiscordGuild } from "next-auth";
+import { DiscordGuild, DiscordUser } from "next-auth";
 import Image from "next/image";
 import GuildButton from "./guildButton";
 
-export default function Guilds({ guilds }: { guilds: DiscordGuild[] }) {
+export default function Guilds(props: { guilds: DiscordGuild[], user: DiscordUser }) {
   return (
     <ul
       role="list"
       className="grid justify-items-start grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-2 sm:gap-x-12 lg:grid-cols-3 xl:gap-x-20 my-10 lg:mx-40"
     >
-      {guilds.map((guilds) => (
+      {props.guilds.map((guilds) => (
         <li key={guilds.id} className="relative ">
           <div className="relative items-center justify-start ">
             <div className="relative flex items-center justify-center mb-4">

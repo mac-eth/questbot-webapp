@@ -15,7 +15,7 @@ export default function MyServers(props: Props) {
         <div className={`${styles.boxWidth}`}>
           <Navbar />
           <Heading />
-          <Guilds guilds={props.guilds} />
+          <Guilds guilds={props.guilds} user={props.user} />
           <Footer />
         </div>
       </div>
@@ -33,35 +33,40 @@ export async function getServerSideProps(context: any) {
     `https://discord.com/api/v10/users/@me/guilds`,
     {
       headers: {
-        // @ts-ignore
         Authorization: `Bearer ${session?.accessToken}`,
       },
     }
   );
   const guilds = await guildFetch.json();
-  for (let i = 0; i < guilds.length; i++) {
-    if (guilds[i].owner === false) {
-      guilds.splice(i, 1);
-    }
-    if (guilds[i].icon === null) {
-      guilds[
-        i
-      ].icon_url = `https://cdn.discordapp.com/icons/1010422850483650570/7ce037d361cbacb995a9075c5cb28e58.png`;
-    } else {
-      guilds[
-        i
-      ].icon_url = `https://cdn.discordapp.com/icons/${guilds[i].id}/${guilds[i].icon}.png`;
-    }
-    if (guilds[i].owner === true) {
-      const removedObject = guilds.splice(i, 1);
-      console.log(removedObject[0]);
-      guilds.unshift(removedObject[0]);
+  const userFetch = await fetch(`https://discord.com/api/v10/users/@me`, {
+    headers: {
+      Authorization: `Bearer ${session?.accessToken}`,
+    },
+  });
+  const user = await userFetch.json();
+  if (user) {
+    for (let i = 0; i < user.length; i++) {
+      if (user.icon === null) {
+        user.icon_url = `https://cdn.discordapp.com/icons/1010422850483650570/7ce037d361cbacb995a9075c5cb28e58.png`;
+      } else {
+        user.icon_url = `https://cdn.discordapp.com/icons/${user.id}/${user.icon}.png`;
+      }
     }
   }
-  console.log(guilds)
-  return {
-    props: {
-      guilds,
-    },
-  };
+  if (guilds) {
+    if (user.avatar === null) {
+      const defaultAvatarNumber = parseInt(user.discriminator) % 5;
+      user.image_url = `https://cdn.discordapp.com/embed/avatars/${defaultAvatarNumber}.png`;
+    } else {
+      const format = user.avatar.startsWith("a_") ? "gif" : "png";
+      user.image_url = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${format}`;
+    }
+    console.log(guilds, user);
+    return {
+      props: {
+        guilds,
+        user,
+      },
+    };
+  }
 }

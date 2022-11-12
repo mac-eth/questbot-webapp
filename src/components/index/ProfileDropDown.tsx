@@ -6,14 +6,12 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ProfileDropdownOptions } from "../../constants";
 import { signout, settings, down } from "src/assets";
-import { useSession } from "src/hooks/useSession";
+import { useSession } from "next-auth/react";
 
 export default function ProfileDropDown() {
   const { data: session } = useSession();
   const image = session?.user?.image as string;
   const username = session?.user?.name as string;
-  const email = session?.user?.email as string;
-  const discordUser = session?.discordUser?.id as string;
 
   return (
     <Menu as="div" className="relative inline-block text-left">
