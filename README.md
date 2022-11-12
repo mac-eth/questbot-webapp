@@ -1,4 +1,7 @@
-## Getting Started
+## Run Example
+An example of this application can be found at ```Test.QuestBot.io```
+
+## Deployment
 
 First, install all dependancies with:
 
