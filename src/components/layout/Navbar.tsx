@@ -1,11 +1,12 @@
+import Link from 'next/link';
 import React from "react";
 import Image from "next/legacy/image";
 import { useState } from "react";
-import { close, logo, menu } from "../assets";
-import { navLinks } from "../constants";
-import LoginButton from "./LoginButton";
+import { close, logo, menu } from "../../assets";
+import { navLinks } from "../../constants";
+import LoginButton from "../index/LoginButton";
 import { motion } from "framer-motion";
-import { appearAnimation } from "./AnimationVariants";
+import { appearAnimation } from "../index/AnimationVariants";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -30,7 +31,7 @@ const Navbar = () => {
               } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <Link href={`/${nav.id}`}>{nav.title}</Link>
             </li>
           ))}
         </ul>
@@ -57,7 +58,7 @@ const Navbar = () => {
                   } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                   onClick={() => setActive(nav.title)}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <Link href={`/${nav.id}`}>{nav.title}</Link>
                 </li>
               ))}
             </ul>

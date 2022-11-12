@@ -1,16 +1,19 @@
 import React from "react";
-import styles from "../styles/style";
+import styles from "../../styles/style";
 import Image from "next/legacy/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { ProfileDropdownOptions } from "../constants";
-import { Session } from "next-auth";
+import { ProfileDropdownOptions } from "../../constants";
 import { signout, settings, down } from "src/assets";
+import { useSession } from "src/hooks/useSession";
 
-export default function ProfileDropDown(props: { session: Session }) {
-  const image = props.session?.user?.image as string;
-  const username = props.session?.user?.name as string;
+export default function ProfileDropDown() {
+  const { data: session } = useSession();
+  const image = session?.user?.image as string;
+  const username = session?.user?.name as string;
+  const email = session?.user?.email as string;
+  const discordUser = session?.discordUser?.id as string;
 
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -22,9 +25,7 @@ export default function ProfileDropDown(props: { session: Session }) {
             <div
               className={`${styles.flexCenter}  ml-10 w-[60px] h-[60px] rounded-full bg-purple-gradient glow-on-hover  p-[2px] cursor-pointer`}
             >
-              <div
-                className={`bg-black rounded-full`}
-              >
+              <div className={`bg-black rounded-full`}>
                 <Image
                   className="absolute rounded-full"
                   src={image}
@@ -40,9 +41,7 @@ export default function ProfileDropDown(props: { session: Session }) {
               src={down}
               width={16}
               height={16}
-              className={`absolute ${
-                open ? "rotate-180" : ""
-              }`}
+              className={`absolute ${open ? "rotate-180" : ""}`}
             />
           </Menu.Button>
           <Transition
@@ -79,22 +78,30 @@ export default function ProfileDropDown(props: { session: Session }) {
               </div>
               <Menu.Item as="div">
                 <div className="py-2 px-2">
-                  <div
-                    className={`${styles.dropdownlink} flex flex-row gap-x-2`}
-                  >
-                    <Image
-                      src={settings}
-                      alt="settings"
-                      width={16}
-                      height={16}
-                    />
-                    {"Settings"}
+                  <div className={`${styles.dropdownlink}`}>
+                    <Link className="flex flex-row gap-x-2" href="/settings">
+                      <Image
+                        src={settings}
+                        alt="settings"
+                        width={16}
+                        height={16}
+                      />
+                      {"Settings"}
+                    </Link>
                   </div>
-                  <div
-                    className={`${styles.dropdownlink} flex flex-row gap-x-1.5`}
-                  >
-                    <Image src={signout} alt="signout" width={18} height={18} />
-                    {"Sign Out"}
+                  <div className={`${styles.dropdownlink}`}>
+                    <Link
+                      className="flex flex-row gap-x-2"
+                      href="/api/auth/signout"
+                    >
+                      <Image
+                        src={signout}
+                        alt="signout"
+                        width={18}
+                        height={18}
+                      />
+                      {"Sign Out"}
+                    </Link>
                   </div>
                 </div>
               </Menu.Item>

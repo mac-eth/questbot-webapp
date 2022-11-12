@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/legacy/image";
-import { features } from "../constants";
-import styles, { layout } from "../styles/style";
+import { features } from "../../constants";
+import styles, { layout } from "../../styles/style";
 import Button from "./Button";
 import { motion } from "framer-motion";
 import { appearAnimation } from "./AnimationVariants";

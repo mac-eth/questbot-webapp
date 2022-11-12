@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/legacy/image";
-import { apple, bill, google } from "../assets";
-import styles, { layout } from "../styles/style";
+import { apple, bill, google } from "../../assets";
+import styles, { layout } from "../../styles/style";
 import { motion } from "framer-motion";
 import {
   appearAnimation

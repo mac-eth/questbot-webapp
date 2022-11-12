@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Renderer from 'react-test-renderer';
-import Footer from "../../src/components/Footer";
+import Footer from "../../src/components/layout/Footer";
 import "@testing-library/jest-dom";
 import { footerLinks } from "../../src/constants";
 

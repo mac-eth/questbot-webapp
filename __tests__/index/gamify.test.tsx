@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Gamify from "../../src/components/Gamify";
+import Gamify from "../../src/components/index/Gamify";
 import "@testing-library/jest-dom";
 
 describe("Gamify Component", () => {

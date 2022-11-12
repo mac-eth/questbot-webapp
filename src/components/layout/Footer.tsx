@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/legacy/image";
-import styles from "../styles/style";
-import { logo } from "../assets";
-import { footerLinks, socialMedia } from "../constants";
+import styles from "../../styles/style";
+import { logo } from "../../assets";
+import { footerLinks, socialMedia } from "../../constants";
 import { motion } from "framer-motion";
-import { appearAnimation } from "./AnimationVariants";
+import { appearAnimation } from "../index/AnimationVariants";
 
 const Footer = () => (
   <motion.div

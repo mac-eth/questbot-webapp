@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/legacy/image";
-import { quotes } from "../assets";
+import { quotes } from "../../assets";
 
 const FeedbackCard = (props: {
   key: number;

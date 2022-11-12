@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import CTA from "../../src/components/CTA";
+import CTA from "../../src/components/index/CTA";
 import "@testing-library/jest-dom";
 
 describe("CTA Component", () => {

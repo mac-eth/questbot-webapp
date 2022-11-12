@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "../styles/style";
+import styles from "../../styles/style";
 
 import { signIn, signOut, useSession } from "next-auth/react";
 import ProfileDropdown from "./ProfileDropDown";
 
 const LoginButton = () => {
-  const { data: session, status } = useSession();
+  const { data: session} = useSession();
 
   if (!session) {
     return (
@@ -28,7 +28,7 @@ const LoginButton = () => {
   } else {
     return (
       <div>
-        <ProfileDropdown session={session} />
+        <ProfileDropdown />
       </div>
     );
   }

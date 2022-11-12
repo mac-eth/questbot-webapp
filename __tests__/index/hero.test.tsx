@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import Hero from "../../src/components/Hero";
-import AddToServer from "../../src/components/AddToServer";
+import Hero from "../../src/components/index/Hero";
+import AddToServer from "../../src/components/index/AddToServer";
 import "@testing-library/jest-dom";
 
 

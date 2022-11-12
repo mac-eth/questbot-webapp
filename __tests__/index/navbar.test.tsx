@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Renderer from "react-test-renderer";
-import Navbar from "../../src/components/Navbar";
+import Navbar from "../../src/components/layout/Navbar";
 import "@testing-library/jest-dom";
 import { SessionProvider } from "next-auth/react";
 

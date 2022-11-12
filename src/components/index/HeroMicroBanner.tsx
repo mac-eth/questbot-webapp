@@ -1,6 +1,6 @@
 import Image from "next/legacy/image";
-import { discount } from "../assets";
-import styles from "../styles/style";
+import { discount } from "../../assets";
+import styles from "../../styles/style";
 
 const HeroMicroBanner = () => {
   return (

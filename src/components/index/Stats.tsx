@@ -1,6 +1,6 @@
 import React from "react";
-import { stats } from "../constants";
-import styles from "../styles/style";
+import { stats } from "../../constants";
+import styles from "../../styles/style";
 import { motion } from "framer-motion";
 import { appearAnimation } from "./AnimationVariants";
 

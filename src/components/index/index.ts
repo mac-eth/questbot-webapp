@@ -1,11 +1,11 @@
-import Navbar from "./Navbar";
+import Navbar from "../layout/Navbar";
 import EarnRewards from "./EarnRewards";
 import Gamify from "./Gamify";
 import Business from "./Business";
 import Clients from "./Clients";
 import CTA from "./CTA";
 import Stats from "./Stats";
-import Footer from "./Footer";
+import Footer from "../layout/Footer";
 import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 

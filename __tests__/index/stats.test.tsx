@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Stats from "../../src/components/Stats";
+import Stats from "../../src/components/index/Stats";
 import "@testing-library/jest-dom";
 
 describe("Stats Component", () => {

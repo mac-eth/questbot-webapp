@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Clients from "../../src/components/Clients";
+import Clients from "../../src/components/index/Clients";
 import "@testing-library/jest-dom";
 
 describe("Clients Component", () => {

@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import EarnRewards from "../../src/components/EarnRewards";
+import EarnRewards from "../../src/components/index/EarnRewards";
 import "@testing-library/jest-dom";
 
 describe("EarnRewards Component", () => {

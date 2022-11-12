@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Business from "../../src/components/Business";
+import Business from "../../src/components/index/Business";
 import "@testing-library/jest-dom";
 
 describe("Business Component", () => {

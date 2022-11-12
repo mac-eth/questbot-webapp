@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/legacy/image";
-import styles from "../styles/style";
-import { arrowUp } from "../assets";
+import styles from "../../styles/style";
+import { arrowUp } from "../../assets";
 
 const AddToServer = () => (
   <div

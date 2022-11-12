@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/style";
+import styles from "../../styles/style";
 import GetStarted from "./GetStarted";
 import { motion } from "framer-motion";
 import { appearAnimation } from "./AnimationVariants";

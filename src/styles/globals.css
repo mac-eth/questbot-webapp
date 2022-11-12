@@ -138,6 +138,10 @@
   filter: blur(750px);
 }
 
+.rainbow__gradient {
+  background: linear-gradient(45deg, #ff00d0, #f200ff, #aa00ff, #8800ff, #1e00ff, #005eff)
+}
+
 /* Glow Button Circle Thingo */
 
 .glow-on-hover {
@@ -240,21 +244,6 @@
   left: 0;
   top: 0;
   border-radius: 10px;
-}
-
-/* Fade-In Animation */
-
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20vh);
-  visibility: hidden;
-  transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
-  will-change: opacity, transform, visibility;
-}
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
 }
 
 @keyframes glowing {

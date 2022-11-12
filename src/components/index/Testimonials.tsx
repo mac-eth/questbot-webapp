@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { feedback } from "../constants";
-import styles from "../styles/style";
+import { feedback } from "../../constants";
+import styles from "../../styles/style";
 import FeedbackCard from "./FeedbackCard";
 
 const Testimonials = () => (

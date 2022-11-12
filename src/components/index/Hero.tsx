@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/legacy/image";
-import styles from "../styles/style";
-import { robot } from "../assets";
+import styles from "../../styles/style";
+import { robot } from "../../assets";
 import AddToServer from "./AddToServer";
 import HeroMicroBanner from "./HeroMicroBanner";
 import { motion } from "framer-motion";

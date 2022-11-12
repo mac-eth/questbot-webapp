@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/legacy/image";
-import { clients } from "../constants";
-import styles from "../styles/style";
+import { clients } from "../../constants";
+import styles from "../../styles/style";
 import { motion } from "framer-motion";
 import { appearAnimation } from "./AnimationVariants";
 

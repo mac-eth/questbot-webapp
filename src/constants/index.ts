@@ -10,7 +10,7 @@ export const navLinks = [
     title: "Docs",
   },
   {
-    id: "dashboard",
+    id: "my-servers",
     title: "Dashboard",
   },
 
@@ -19,8 +19,8 @@ export const navLinks = [
 export const ProfileDropdownOptions = [
   { title: "QuestBot",
     Links: [
-    { href: "/pro", title: "Pro" },
-    { href: "/memberships", title: "Memberships" }
+    { href: "/pro", title: "Questbot Pro" },
+  { href: "/memberships", title: "QuestBot Gold" }
     ]
   },
   { title: "My Servers",

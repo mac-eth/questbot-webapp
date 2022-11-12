@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/style";
-import { EarnRewards, Business, Gamify, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "../components";
+import { EarnRewards, Business, Gamify, Clients, CTA, Footer, Navbar, Stats,  Hero } from "../components/index";
 
 const Home = () => (
   <div className="bg-primary w-full">
